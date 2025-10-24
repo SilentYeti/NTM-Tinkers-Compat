@@ -288,7 +288,6 @@ java {
             languageVersion.set(JavaLanguageVersion.of(8))
         }
         // Azul covers the most platforms for Java 8+ toolchains, crucially including MacOS arm64
-        vendor.set(JvmVendorSpec.AZUL)
     }
     if (!noPublishedSources.toBoolean()) {
         withSourcesJar()
@@ -308,7 +307,6 @@ tasks.withType(JavaCompile).configureEach {
 
         javaCompiler.set(javaToolchains.compilerFor {
             languageVersion.set(JavaLanguageVersion.of(17))
-            vendor.set(JvmVendorSpec.AZUL)
         })
     }
 }
@@ -374,9 +372,9 @@ minecraft {
     extraRunJvmArguments.add("-ea:${modGroup}")
     if (usesMixins.toBoolean()) {
         extraRunJvmArguments.addAll([
-            '-Dmixin.hotSwap=true',
-            '-Dmixin.checks.interfaces=true',
-            '-Dmixin.debug.export=true'
+                '-Dmixin.hotSwap=true',
+                '-Dmixin.checks.interfaces=true',
+                '-Dmixin.debug.export=true'
         ])
     }
 
@@ -874,7 +872,7 @@ if (enableJava17RunTasks.toBoolean()) {
         if (modId != 'lwjgl3ify') {
             java17Dependencies("io.github.twilightflower:lwjgl3ify:1.0.1")
             java17PatchDependencies("io.github.twilightflower:lwjgl3ify:1.0.1:forgePatches") {
-            transitive = false
+                transitive = false
             }
         }
     }

@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "com.nttc.ntmcompat.mixin.mod",
+  "plugin": "com.nttc.mixin.mod.ModMixinConfigPlugin",
+  "compatibilityLevel": "JAVA_8",
+  "target": "@env(MOD)",
+  "client": [
+  ],
+  "mixins": [
+  ],
+  "server": [],
+  "setSourceFile": true,
+  "minVersion": "0.8.7"
+}
