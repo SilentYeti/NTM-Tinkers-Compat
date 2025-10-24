@@ -1,0 +1,14 @@
+[{
+    "modid": "${modid}",
+    "name": "${modname}",
+    "description": "A mod that adds compatibility with NTM:CE and Tinkers' Construct",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "logoFile": "",
+    "url": "",
+    "authorList": [],
+    "credits": "",
+    "dependencies": [
+        "hbm"
+    ]
+}]
